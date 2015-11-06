@@ -61,7 +61,7 @@ Third person with whom I reviewed my graph with was a six sigma black belt of my
 * Use a standard title for the plots
 * Give a small description about the chart and if possible a link to the data set 
 * Remove grid lines from the graphs as there is a mouse over event
-* First I didn’t notice the feature of highlighting the focused trend line. Please provide a note  at the bottom of the graph to move the mouse pointer to trend line;
+* First I didn’t notice the feature of highlighting the focused trend line. Please provide a note  at the bottom of the graph to move the mouse pointer to trend line."
 
 ######Final Design
 I feel the aesthetics improved a lot with better title and graphs look cleaner without the grid lines. Providing a link to the data set will help interested readers to look and play around the dataset. Also there was a chance that some of the readers may miss the trend line mouse over effect. Adding the footer noter will make sure that all readers will notice with the effect.
