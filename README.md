@@ -40,9 +40,8 @@ I have showed this graph to my colleague and he gave the following comments:
 
 
 ######Post-feedback Design -1
-* Y-axis values were corrected by rounding to 2 decimal places
-* A mouse over event was added to the trend lines to highlight the focused trend line .
-* Added title to bar charts
+Incorportaed the suggessions to correct the error on Y-axis labels. Titles to bar chart conveyed the message clearly to audince. Adding the mouse over improved the clarity of teh trend. Also helped ina dding an animation into my chart.
+
 
 
 #####Interview #2
@@ -52,9 +51,7 @@ I loved the visualization which is clearly conveying the message. Color combinat
 Similar to bar charts add titles for your line charts also.
 
 ######Post-feedback Design -3
-
-* Same color coding is used for all charts
-* Titles are added for line charts
+As per the feed back changed the color coding to use same color through the story for each handedness. This helped to clearly convey the message. There was  a chance that reader will unknowingly follow the barchart color coding for trend chart also. This suggession really helped not to misslead any readers.
 
 
 #####Interview #3
@@ -67,10 +64,7 @@ Third person with whom I reviewed my graph with was a six sigma black belt of my
 * First I didn’t notice the feature of highlighting the focused trend line. Please provide a note  at the bottom of the graph to move the mouse pointer to trend line;
 
 ######Final Design
-* Changed the title to a more meaningful and standard text.
-* Added a link to data set.
-* Removed the grid lines
-* Added a footer to the line chart about the mouse over feature.
+I feel the aesthetics improved a lot with better title and graphs look better without the grid lines. Providing a link to data set will help interested readers to look and play around the dataset. Also there was a chance that some of the readers may miss the trend line mouse over effect. Adding the footer noter will make sure that all readers will notice with the effect.
 
 ## Resources
 * [dimple.js Documentation](http://dimplejs.org/) 
