@@ -4,6 +4,10 @@
 The goal of this visualization is to compare the performance of 1157 baseball player in terms of their Handedness and how the performance measures (batting average and home runs) varies with player’s Height. 
 
 ##Design
+My design include:
+* Two bar charts explaining the performance (Batting Average & Home Runs, encoded in Y-axis) summary by Handedness (Encoded in X-axis). Bar chart was selected as the chart type as its best for comparing categorical variable values like Handedness.
+
+* Two trend charts explaining how the performance (Batting Average & Home Runs , encoded in Y axis) varies with Height(encoded in X axis) for different Handedness (encoded in Color). Line chart is best suited to analyze relationships and show trends. Hence this chart type was selected.
 
 ####Exploratory Data Analysis in R
 I downloaded the Baseball Data from Udacity’s dataset options that included performance and physical aspects like height, weight and handedness of 1157 players. I have analyzed the data using R. Some basic statistics and plots revealed a clear performance difference between left and  right handed players as shown below:
