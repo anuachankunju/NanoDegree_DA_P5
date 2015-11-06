@@ -11,7 +11,7 @@ I downloaded the Baseball Data from Udacity’s dataset options that included pe
 ![Explore 1](https://github.com/anuachankunju/NanoDegree_DA_P5/blob/master/images/Exploratory_1_HomeRunsVsHandedness.JPG)
 ![Explore 2](https://github.com/anuachankunju/NanoDegree_DA_P5/blob/master/images/Exploratory_2_Handedness.JPG)
 
-The remaining analysis can be found in [PlayerDataExpolration.Rmd](https://github.com/anuachankunju/NanoDegree_DA_P5/blob/master/PlayerDataExpolration.Rmd)
+The remaining analysis can be found in [PlayerDataExpolration](https://github.com/anuachankunju/NanoDegree_DA_P5/blob/master/PlayerDataExpolration.html)
 
 ####Data Visualization (dimple.js)
 To emphasize my finding in exploratory analysis that **Left handers usually have better performance** in terms of batting average and Home Runs, I introduced one more variable Height to explain how the performance of left and right hand players varies by Height. Height was showing an interesting trend in my exploratory analysis. Exploratory Analysis shows that players in certain Height range (70-75) have a better average home run. 
@@ -23,9 +23,9 @@ A players performance can be measured by batting Average as well as home runs. H
 * Mean Batting average variance by Height faceted by Handedness
 * Mean Homeruns variance by Height faceted by Handedness
 
-I also included two bar charts to show the performance (Batting Average & Home Runs) summary by Handedness before the trend chart as it will give a clear idea to audience before looking at the trend. A bar chart is usually used for comparison of categorical data. Here Bar chart was selected as I’m trying to compare the left and right hand player’s performance. The visualization can be found in index_2.html.
+I also included two bar charts to show the performance (Batting Average & Home Runs) summary by Handedness before the trend chart as it will give a clear idea about the performance summary to audience. A bar chart is usually used for the comparison of categorical data. Here Bar chart was selected as the chart type as I’m trying to compare the left and right hand player’s performance. The visualization can be found in index_2.html.
 
-I interviewed 3 individuals in person, and asked for their feedback on the data visualization after prompting them with the background information and a small set of questions. Highlighted comments from them are listed below:
+
 
 ##Feedback
 I interviewed 3 individuals in person, and asked for their feedback on the data visualization after prompting them with the background information and a small set of questions. Highlighted comments from them are listed below:
