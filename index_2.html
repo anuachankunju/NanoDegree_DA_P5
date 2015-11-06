@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+
+		<style>
+			circle.dimple-series-1 {
+        			fill: red;
+   		 	}
+   		 	h2 {
+      				text-align: center;
+    		}
+  		</style> 
+
+  		<script type="text/javascript">
+  			function draw(data) {
+  		    /*
+        		D3.js setup code
+      		*/
+
+          		"use strict";
+          		var margin = 75,
+              	width = 1400 - margin,
+              	height = 500 - margin;
+              var small_chart_width=400 - margin,
+                  small_chart_height=300 - margin
+
+         		var title = d3.select("body")
+            					.append('h2')
+            					.text("Left-handed Hitters Have Better Batting Average While Height Does not Matter");
+
+          		/*var text = d3.select("body")
+            					.append('h4')
+           		 				.text("Players with left handedness usually have better batting average than right handed players. Left handedness holds the advantage when the height is in the range of 67 to 77. Batting average doesn't vary by height for the most of the data set. At the extremes it does vary a little bit but it might be because there are so few data points.");*/
+         
+
+          /***********************************************
+              Chart -1  - Histogram of Batting average 
+          ************************************************/
+            //var svg1 = dimple.newSvg("#my_chart1", 400, 250);
+            var svg1 = d3.select("body")
+                          .append("svg")
+                          .attr("width", small_chart_width + margin)
+                          .attr("height", small_chart_height + margin)
+                          .append('g')
+                          .attr('class','chart');
+            var myChart1 = new dimple.chart(svg1, data);
+            myChart1.setBounds(50, 40, 340, 200);
+            var x = myChart1.addCategoryAxis("x", "Handedness");
+            x.title = 'Handedness';
+            x.addOrderRule("Handedness");
+            var y = myChart1.addMeasureAxis("y", "BattingAverage");
+            y.title = 'Batting Average';
+            var mySeries = myChart1.addSeries("Handedness", dimple.plot.bar);
+            mySeries.aggregate = dimple.aggregateMethod.avg;
+            myChart1.assignColor("Left", "#FB8072");
+            myChart1.assignColor("Right", "#FDB462");
+            myChart1.assignColor("Both", "#80B1D3");
+            myChart1.title="Test Tittle";
+            myChart1.draw();
+
+          /***********************************************
+              Chart -2  - Histogram of Batting average 
+          ************************************************/
+            var svg2 = d3.select("body")
+                          .append("svg")
+                          .attr("width", small_chart_width + margin+500)
+                          .attr("height", small_chart_height + margin)
+                          .append('g')
+                          .attr('class','chart');
+            var myChart2 = new dimple.chart(svg2, data);
+            myChart2.setBounds(100, 40, 340, 200);
+            var x = myChart2.addCategoryAxis("x", "Handedness");
+            x.title = 'Handedness';
+            x.addOrderRule("Handedness");
+            var y = myChart2.addMeasureAxis("y", "HomeRuns");
+            y.title = 'HomeRuns';
+            var mySeries = myChart2.addSeries("Handedness", dimple.plot.bar);
+            mySeries.aggregate = dimple.aggregateMethod.avg;
+            myChart2.assignColor("Left", "#FB8072");
+            myChart2.assignColor("Right", "#FDB462");
+            myChart2.assignColor("Both", "#80B1D3");
+            myChart2.draw();
+
+
+          /*****************************
+              Chart -3  Starts
+          ******************************/
+          /* 
+            Define the svg element
+          */
+          		var svg3 = d3.select("body")
+           					 .append("svg")
+              					.attr("width", width + margin)
+              					.attr("height", height + margin)
+            				.append('g')
+                				.attr('class','chart');
+          /*
+        		Dimple.js Chart construction code
+     		 */
+          		var myChart3 = new dimple.chart(svg3, data);
+          		myChart3.setBounds(200, 30, 750, 400);
+          		var xAxis = myChart3.addCategoryAxis("x", "Height"); 
+          		var yAxis = myChart3.addMeasureAxis("y", "BattingAverage");
+         		  xAxis.title = "Height inches";
+          		yAxis.title = "Mean Batting Average of All Players in the Data Set";
+
+        	/*
+        		Set y axis to make it more reasonable
+      		*/      
+          		yAxis.overrideMax = 0.3;
+          		yAxis.overrideMin = 0.0;
+          		yAxis.ticks = 10;
+          		yAxis.tickFormat = ".2f";
+
+          		var s = myChart3.addSeries(["Handedness"], dimple.plot.scatter);       
+          		s.aggregate = dimple.aggregateMethod.avg;
+
+          		var s = myChart3.addSeries(["Handedness"], dimple.plot.line);       
+          		s.aggregate = dimple.aggregateMethod.avg;
+
+
+          		var myLegend = myChart3.addLegend(1000, 80, 60, 100, "Right");
+
+          /*
+        		Add color for different handedness
+      		*/         
+          		myChart3.assignColor("LeftHanded", "#4863A0");
+          		myChart3.assignColor("RightHanded", "#800000");
+          		myChart3.assignColor("BothHanded", "#FF7F00");
+              myChart3.draw();
+          		/*svg.append("text")
+             				.attr("x", c._xPixels() + c._widthPixels() / 2)
+             				.attr("y", c._yPixels() - 20)
+             				.style("text-anchor", "middle")
+             				.style("font-family", "sans-serif")
+             				.text("My brilliant chart about a and b")*/
+
+
+
+            /*****************************
+              Chart -4 Starts
+            ******************************/
+            var svg4 = d3.select("body")
+           					 .append("svg")
+              					.attr("width", width + margin)
+              					.attr("height", height + margin)
+            				.append('g')
+                				.attr('class','chart');
+          /*
+        		Dimple.js Chart construction code
+     		 */
+          		var myChart4 = new dimple.chart(svg4, data);
+          		myChart4.setBounds(200, 30, 750, 400);
+          		var xAxis = myChart4.addCategoryAxis("x", "Height"); 
+          		var yAxis = myChart4.addMeasureAxis("y", "HomeRuns");
+         		  xAxis.title = "Height inches";
+          		yAxis.title = "Mean HomeRuns of All Players in the Data Set";
+
+        	/*
+        		Set y axis to make it more reasonable
+      		*/      
+          		yAxis.overrideMax = 300;
+          		yAxis.overrideMin = 0;
+          		yAxis.ticks = 10;
+          		//yAxis.tickFormat = ".2f";
+
+          		var s = myChart4.addSeries(["Handedness"], dimple.plot.scatter); 
+          		s.aggregate = dimple.aggregateMethod.avg;
+          		var s = myChart4.addSeries(["Handedness"], dimple.plot.line); 
+          		s.aggregate = dimple.aggregateMethod.avg;
+
+          		/*var s = myChart4.addSeries(dimple.plot.scatter); 
+          		s.aggregate = dimple.aggregateMethod.avg;
+
+          		var s = myChart4.addSeries(dimple.plot.line); 
+          		s.aggregate = dimple.aggregateMethod.avg;*/
+
+
+
+          		var myLegend = myChart4.addLegend(1000, 80, 60, 100, "Right");
+
+          	/*
+        		Add color for different handedness
+      		  */         
+          		myChart4.assignColor("LeftHanded", "#4863A0");
+          		myChart4.assignColor("RightHanded", "#800000");
+          		myChart4.assignColor("BothHanded", "#FF7F00");
+
+          		myChart4.draw();
+          		/*svg.append("text")
+             				.attr("x", c._xPixels() + c._widthPixels() / 2)
+             				.attr("y", c._yPixels() - 20)
+             				.style("text-anchor", "middle")
+             				.style("font-family", "sans-serif")
+             				.text("My brilliant chart about a and b")*/
+
+            /*****************************
+              Chart -4 Ends
+            ******************************/
+            
+  			};
+  		</script>
+</head>
+
+
+<body>
+	<script type="text/javascript">
+  		d3.csv("data/baseball_data.csv", draw);
+	</script>
+</body>
+
+
+</html>
