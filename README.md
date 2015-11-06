@@ -35,7 +35,7 @@ I have showed this graph to my colleague and he gave the following comments:
 
 "The graph is clearly explaining the performance differences between left & Right handed players. Some improvements I see are:
 * Y-axis of first chart is showing repeated values. Rounding it to 2 decimals will solve the issue
-* The line graph shows close trends which is difficult to follow for some ranges where the mean values are very close. Highlighting the Left Handers trend to emphasize the  better performance .
+* The line graph shows close trends which is difficult to follow for some ranges where the mean values are very close.    Highlighting the Left Handers trend to emphasize the  better performance .
 * Also adding title to the summary charts will help to convey the message effectively."
 
 
@@ -48,8 +48,8 @@ I have showed this graph to my colleague and he gave the following comments:
 #####Interview #2
 Second person who reviewed the improved graph was another Nano-degree student in my organization and her comment was:
 
-I loved the visualization which very clearly conveying the message. Color combinations are really nice. However one thing I noted is the color coding used to encode handedness in the bar chart and line chart are different. This will mislead the viewer. I would suggest to use the same color coding for Handedness for all the charts. 
-Similar to bar charts add titles for you line charts also
+I loved the visualization which is clearly conveying the message. Color combinations are really nice. However one thing I noted is the color coding used to encode handedness in the bar chart and line chart are different. This will mislead the viewer. I would suggest to use the same color coding for Handedness for all the charts. 
+Similar to bar charts add titles for your line charts also.
 
 ######Post-feedback Design -3
 
@@ -58,14 +58,16 @@ Similar to bar charts add titles for you line charts also
 
 
 #####Interview #3
-Third person with whom I reviewed my graph with was a six sigma black belt of my team and here are the highlights from his comments: “This is an excellent visual for the given data set. However some minor improvements suggested are: 
+Third person with whom I reviewed my graph with was a six sigma black belt of my team and here are the highlights from his comments: 
+
+“This is an excellent visual for the given data set. However some minor improvements suggested are: 
 * Use a standard title for the plots
-* Give a small description about the chart and it possible a link to the data set 
+* Give a small description about the chart and if possible a link to the data set 
 * Remove grid lines from the graphs as there is a mouse over event
 * First I didn’t notice the feature of highlighting the focused trend line. Please provide a note  at the bottom of the graph to move the mouse pointer to trend line;
 
 ######Final Design
-* Chnaged the title to a more meaningful and standard text.
+* Changed the title to a more meaningful and standard text.
 * Added a link to data set.
 * Removed the grid lines
 * Added a footer to the line chart about the mouse over feature.
