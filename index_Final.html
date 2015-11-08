@@ -27,8 +27,8 @@
       var margin = 75,
       width = 1400 - margin,
       height = 500 - margin;
-      var small_chart_width=400 - margin,
-        small_chart_height=300 - margin;               
+      var small_chart_width = 400 - margin,
+        small_chart_height = 300 - margin;               
       d3.select("body")
         .append('h2')
         .text("Performance Analysis by Handedness");
@@ -50,7 +50,7 @@
     */
     svg1.append("text")
       .attr("x", (small_chart_width / 2))             
-      .attr("y", 0 + (margin/ 4))
+      .attr("y", 0 + (margin / 4))
       .attr("text-anchor", "middle")  
       .style("font-size", "20px") 
       .style("text-decoration", "underline")
@@ -74,7 +74,7 @@
       myChart1.assignColor("Left", "#FB8072");
       myChart1.assignColor("Right", "#80B1D3");
       myChart1.assignColor("Both", "#FDB462");
-      myChart1.title="Test Tittle";
+      myChart1.title = "Test Tittle";
       myChart1.draw();
 
     /***********************************************
@@ -85,7 +85,7 @@
     */
       var svg2 = d3.select("body")
                   .append("svg")
-                  .attr("width", small_chart_width + margin+500)
+                  .attr("width", small_chart_width + margin + 500)
                   .attr("height", small_chart_height + margin)
                   .append('g')
                   .attr('class','chart');
@@ -94,7 +94,7 @@
     */
       svg2.append("text")
           .attr("x", (small_chart_width ))             
-          .attr("y", 0 + (margin/ 4))
+          .attr("y", 0 + (margin / 4))
           .attr("text-anchor", "middle")  
           .style("font-size", "20px") 
           .style("text-decoration", "underline")
@@ -167,8 +167,8 @@
       myChart3.assignColor("Both", "#FDB462");
       myChart3.draw();
       svg3.append("text")
-          .attr("x", width/2)             
-          .attr("y", height+margin-10)
+          .attr("x", width / 2)             
+          .attr("y", height + margin - 10)
           .attr("text-anchor", "middle")  
           .style("font-size", "15px") 
           .style("fill", "red") 
@@ -225,8 +225,8 @@
       myChart4.assignColor("Both", "#FDB462");
       myChart4.draw();
       svg4.append("text")
-          .attr("x", width/2)             
-          .attr("y", height+margin-10)
+          .attr("x", width / 2)             
+          .attr("y", height + margin - 10)
           .attr("text-anchor", "middle")  
           .style("font-size", "15px") 
           .style("fill", "red") 
@@ -267,7 +267,7 @@
   <script type="text/javascript">
     d3.csv("data/baseball_data.csv", function(d) {
       //Removing all data points with zero Batting average.
-      if (d['BattingAverage']>0)
+      if (d['BattingAverage'] > 0)
         return d;
     }, draw);
   </script>
